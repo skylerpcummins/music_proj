@@ -1,0 +1,10 @@
+<h1>List a New Album</h1>
+
+<form action="<%= albums_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
+  <h3>Album title:</h3>
+  <br>
+  <input type="text" name="album[title]">
+  <br>
+  <input type="submit" value="List Album!">
+</form>

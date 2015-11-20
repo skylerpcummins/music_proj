@@ -1,0 +1,17 @@
+<%= button_to "Delete this album", album_url, method: :delete %>
+
+<h3><%= "#{@album.title}" %></h3>
+
+<ul>
+<% unless @album.tracks.nil? %>
+  <% @album.tracks.each do |track| %>
+  <li>
+    <%= link_to "#{track.track_name}", track_url(track)%>
+  </li>
+  <% end %>
+<% end %>
+</ul>
+
+<%= link_to "Edit this album", edit_album_url(@album) %>
+<br>
+<%= link_to "Back to albums", band_url %>
